@@ -1,0 +1,3 @@
+全局默认使用UTF-8编码
+数据库oracle，有时间把mysql也写一套
+spring/struts2/hibernate
