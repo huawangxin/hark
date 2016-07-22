@@ -1,3 +1,22 @@
+项目说明：
 全局默认使用UTF-8编码
 数据库oracle，有时间把mysql也写一套
 spring/struts2/hibernate
+常量原则上默认使用配置文件存储常用变量数据，减少不必要的存储常量数据在数据库。
+登录用户注册方式：企业注册账号和店铺；然后在店铺中新增员工
+变量类型默认string/long类型
+字段中必填项和非必填项，后续再约束，现在仅限于前后台约束。
+
+
+如果要搭建struts2 就要这六个包
+struts2-core.jar——Struts2的核心包
+xwork-core.jar——Command模式框架，WebWork和Struts2都基于xwork
+commons-logging.jar——Java日志工具类包
+commons-fileupload-1.2.1.jar——文件上传 
+freemarker.jar——模板引擎，一个基于模板生成文本输出的通用工具
+ognl.jar——Object-Graph Navigation Language，表达式语言，用来获取和设置Java对象属性
+可选包
+	antlr.jar——语法分析器
+	aopalliance.jar——AOP联盟标准接口
+	classworlds.jar——class对象管理
+	commons-beanutils.jar——Bean处理工具类包 这六个
