@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+
+	<!-- Spring管理Struts2的Action -->
+	<bean name="loginAction" class="cn.com.wangxin.wangxin.action.org.LoginAction" scope="prototype"></bean>
+	<bean name="employeeMainAction" class="com.opensymphony.xwork2.ActionSupport" scope="prototype"></bean>
+	<bean name="employeeAction" class="cn.com.wangxin.wangxin.action.org.EmployeeAction" scope="prototype">
+		<!-- <property name="userManage" ref="userManage"></property> -->
+	</bean>
+
+	<!-- Spring管理Struts2的Interceptor拦截器 -->
+	<bean name="checkLoginInterceptor" class="cn.com.wangxin.wangxin.common.interceptor.CheckLogin" scope="prototype"></bean>
+
+	
+	
+	<bean name="employeeManage" class="cn.com.wangxin.wangxin.org.service.EmployeeManageImp">
+		<!-- <property name="userDao" ref="userDao"></property> -->
+	</bean>
+	
+	<bean name="employeeDao" class="cn.com.wangxin.wangxin.org.dao.EmployeeDaoImp">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+</beans>
