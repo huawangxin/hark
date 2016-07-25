@@ -31,19 +31,19 @@
 	<package name="loginAction" namespace="/" extends="abstract_struts">
 	
 		<action name="login" class="loginAction">
-			<result name="success" type="redirect">userMain</result>
+			<result name="success" type="redirect">employeeMain</result>
 			<result name="fail">/fail.jsp</result>
 		</action>
 
 		<!-- 该action只负责跳转，用struts提供的ActionSupport -->
-		<action name="userMain" class="userMainAction">
+		<action name="employeeMain" class="employeeMainAction">
 			<result name="success">/userMain.jsp</result>
 			<interceptor-ref name="myInterceptor" />
 		</action>
 	</package>
 
-	<package name="userActions" namespace="/user" extends="abstract_struts">
-		<action name="*_*" class="userAction" method="{1}">
+	<package name="employeeActions" namespace="/employee" extends="abstract_struts">
+		<action name="*_*" class="employeeAction" method="{1}">
 			<result name="success" type="redirect">/{2}.jsp</result>
 			<result name="fail">/fail.jsp</result>
 			<interceptor-ref name="myInterceptor" />

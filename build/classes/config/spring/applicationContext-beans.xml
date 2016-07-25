@@ -8,22 +8,22 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
 	<!-- Spring管理Struts2的Action -->
-	<bean name="loginAction" class="com.jialin.action.LoginAction" scope="prototype"></bean>
-	<bean name="userMainAction" class="com.opensymphony.xwork2.ActionSupport" scope="prototype"></bean>
-	<bean name="userAction" class="com.jialin.action.UserAction" scope="prototype">
+	<bean name="loginAction" class="cn.com.wangxin.wangxin.action.org.LoginAction" scope="prototype"></bean>
+	<bean name="employeeMainAction" class="com.opensymphony.xwork2.ActionSupport" scope="prototype"></bean>
+	<bean name="employeeAction" class="cn.com.wangxin.wangxin.action.org.EmployeeAction" scope="prototype">
 		<!-- <property name="userManage" ref="userManage"></property> -->
 	</bean>
 
-	<!-- Spring管理Struts2的Interceptor -->
-	<bean name="checkLoginInterceptor" class="com.jialin.interceptor.CheckLogin" scope="prototype"></bean>
+	<!-- Spring管理Struts2的Interceptor拦截器 -->
+	<bean name="checkLoginInterceptor" class="cn.com.wangxin.wangxin.common.interceptor.CheckLogin" scope="prototype"></bean>
 
 	
 	
-	<bean name="userManage" class="com.jialin.service.UserManageImp">
+	<bean name="employeeManage" class="cn.com.wangxin.wangxin.org.service.EmployeeManageImp">
 		<!-- <property name="userDao" ref="userDao"></property> -->
 	</bean>
 	
-	<bean name="userDao" class="com.jialin.dao.UserDaoImp">
+	<bean name="employeeDao" class="cn.com.wangxin.wangxin.org.dao.EmployeeDaoImp">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	

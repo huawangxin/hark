@@ -13,8 +13,8 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 	
 	
-	
-		<mapping class="com.jialin.entity.User"/>
+		<!-- 实体类映射到数据库中 -->
+		<mapping class="cn.com.wangxin.wangxin.*.entity.*"/>
 	</session-factory>
 	
 	
