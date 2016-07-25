@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
-<title>Insert title here</title>
+<title>测试页面</title>
 </head>
 <body>
 
-<a href="login.jsp">ssh2演示</a>
+<a href="login.jsp">测试页面</a>
 
 </body>
 </html>

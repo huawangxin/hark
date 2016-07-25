@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="login" method="post">
-	用户名:<input type="text" name="user.name"/><br />
-	密码:<input type="password" name="user.password"/><br />
+	用户名:<input type="text" name="employee.loginName"/><br />
+	密码:<input type="password" name="employee.password"/><br />
 	<input type="submit" value="登录" />
 </form>
 </body>
