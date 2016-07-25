@@ -13,7 +13,7 @@
 	function addUser()
 	{
 		var myform=document.forms[0];
-		myform.action="user/addUser_success";
+		myform.action="employee/addEmployee_success";
 		myform.method="post";
 		myform.submit();
 	}
@@ -21,7 +21,7 @@
 	function modifyUser()
 	{
 		var myform=document.forms[0];
-		myform.action="user/modifyUser_success";
+		myform.action="employee/modifyEmployee_success";
 		myform.method="post";
 		myform.submit();
 	}
@@ -29,7 +29,7 @@
 	function deleteUser()
 	{
 		var myform=document.forms[0];
-		myform.action="user/deleteUser_success";
+		myform.action="employee/deleteEmployee_success";
 		myform.method="post";
 		myform.submit();
 	}
@@ -40,12 +40,11 @@
 </head>
 <body>
 <form id="myform1" >
-	用户名：<input type="text" name="user.name" /><br />
-	密码：<input type="text" name="user.password" /><br />
-	年龄：<input type="text" name="user.age" /><br />
-	<input type="button" name="btnadd" onclick="addUser()" value="增加" />
-	<input type="button" name="btnmodify" onclick="modifyUser()" value="修改" />
-	<input type="button" name="btndel" onclick="deleteUser()" value="删除"  />
+	用户名：<input type="text" name="employee.name" /><br />
+	密码：<input type="text" name="employee.password" /><br />
+	<input type="button" name="btnadd" onclick="addEmployee()" value="增加" />
+	<input type="button" name="btnmodify" onclick="modifyEmployee()" value="修改" />
+	<input type="button" name="btndel" onclick="deleteEmployee()" value="删除"  />
  </form>
 </body>
 </html>
