@@ -8,7 +8,7 @@ import cn.com.wangxin.wangxin.org.entity.Employee;
 import cn.com.wangxin.wangxin.org.service.EmployeeManage;
 
 /**
- * 员工实体类
+ * 员工
  * 
  * @author huawangxin
  *

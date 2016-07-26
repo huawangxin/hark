@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
-<title>Insert title here</title>
+<title>测试页面</title>
 </head>
 <body>
-操作成功！
+测试页面
+
 </body>
 </html>

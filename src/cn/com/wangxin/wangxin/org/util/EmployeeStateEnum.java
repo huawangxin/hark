@@ -1,5 +1,12 @@
 package cn.com.wangxin.wangxin.org.util;
 
+/**
+ * 使用该类型的实体类：员工，公司
+ * 
+ * @author huawangxin
+ *
+ * @date 2016年7月26日 上午9:00:11
+ */
 public enum EmployeeStateEnum {
 	QXZ("","请选择"),
 	zc("1","正常"),

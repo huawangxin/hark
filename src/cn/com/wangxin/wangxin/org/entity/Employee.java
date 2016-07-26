@@ -22,7 +22,7 @@ import cn.com.wangxin.wangxin.org.util.EmployeeTypeEnum;
  * @date 2016年7月25日 下午2:25:40
  */
 @Entity
-@Table(name = "hark_huawangxin_emploee")
+@Table(name = "hark_huawangxin_employee")
 public class Employee extends IdEntity implements Serializable{
 
 	/**
@@ -67,21 +67,36 @@ public class Employee extends IdEntity implements Serializable{
 	 * 关联枚举类 EmployeeTypeEnum
 	 */
 	private String employeeType=EmployeeTypeEnum.ZSYG.getValue();
-	/**s
+	/**
 	 * 所属企业
-	 * (关联 企业id)
+	 * (关联 企业orgUid)
 	 */
-	private String enterpriseId;
+	private String companyOrgUid;
 	/**
 	 * 入职时间
 	 */
-	private long createTime;
+	private long hiredate;
 	/**
 	 * 员工状态
 	 * 关联枚举类 EmployeeStateEnum
 	 */
 	private String state=EmployeeStateEnum.zc.getValue();
+	/**
+	 * 创建时间
+	 */
+	private long createTime=System.currentTimeMillis();
+	/**
+	 * 排序
+	 */
+	private String sort;
 	
+	@Column(name="sort", length=32)
+	public String getSort() {
+		return sort;
+	}
+	public void setSort(String sort) {
+		this.sort = sort;
+	}
 	@Column(name="loginName", length=32, nullable=false, unique=true)
 	public String getLoginName() {
 		return loginName;
@@ -147,12 +162,12 @@ public class Employee extends IdEntity implements Serializable{
 	public void setEmployeeType(String employeeType) {
 		this.employeeType = employeeType;
 	}
-	@Column(name="enterpriseId", length=32)
-	public String getEnterpriseId() {
-		return enterpriseId;
+	@Column(name="companyOrgUid", length=32)
+	public String getCompanyOrgUid() {
+		return companyOrgUid;
 	}
-	public void setEnterpriseId(String enterpriseId) {
-		this.enterpriseId = enterpriseId;
+	public void setCompanyOrgUid(String companyOrgUid) {
+		this.companyOrgUid = companyOrgUid;
 	}
 	@Column(name="createTime", length=32)
 	public long getCreateTime() {
@@ -167,6 +182,13 @@ public class Employee extends IdEntity implements Serializable{
 	}
 	public void setState(String state) {
 		this.state = state;
+	}
+	@Column(name="hiredate", length=32)
+	public long getHiredate() {
+		return hiredate;
+	}
+	public void setHiredate(long hiredate) {
+		this.hiredate = hiredate;
 	}
 	
 	

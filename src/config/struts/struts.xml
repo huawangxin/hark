@@ -29,8 +29,7 @@
 		</global-results>
 	</package> -->
 
-	<package name="abstract_struts" abstract="true" extends="struts-default"
-		namespace="/">
+	<package name="abstract_struts" abstract="true" extends="struts-default" namespace="/">
 		<interceptors>
 			<interceptor name="checkLogin" class="checkLoginInterceptor" />
 			<interceptor-stack name="myInterceptor">

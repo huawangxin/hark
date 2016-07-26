@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=GB18030">
-<title>ssh2_test演示</title>
+<title>测试页面</title>
 </head>
 <body>
-<form action="login" method="post">
-	用户名:<input type="text" name="employee.loginName"/><br />
-	密码:<input type="password" name="employee.password"/><br />
-	<input type="submit" value="登录" />
-</form>
+
+测试页面
+
 </body>
 </html>
