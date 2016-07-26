@@ -1,4 +1,4 @@
-package cn.com.wangxin.wangxin.common.interceptor;
+package cn.com.wangxin.wangxin.org.interceptor;
 
 import java.util.Map;
 
@@ -43,12 +43,13 @@ public class CheckLogin implements Interceptor {
 
 		//String[] loginUsername=(String[])parameters.get("user.name");
 		
-		if(session.get("user.name")!=null)
-		{
+		if(session.get("employee.name")!=null)
+		{		
 			return arg0.invoke();
 		}
+		session.put("error_msg", "登录异常，请重新登录！");
 		
-		return "checkLoginFail";
+		return "loginFail";
 	}
 
 }

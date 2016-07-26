@@ -3,11 +3,11 @@
 <%@ page import="java.util.*"%>
 <html>
 <%
-String error_meg= (String)request.getAttribute("error_meg");
-if(error_meg==null){
-	error_meg="";
+String error_msg= (String)session.getAttribute("error_msg");
+System.out.println(error_msg);
+if(error_msg==null){
+	error_msg="";
 }
-
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,7 +18,7 @@ if(error_meg==null){
 	ำรปงร๛:<input type="text" name="employee.loginName"/><br />
 	รÜย๋:<input type="password" name="employee.password"/><br />
 	<input type="submit" value="ตวยผ" />
-	<%=error_meg %>
+	<%=error_msg %>
 </form>
 </body>
 </html>

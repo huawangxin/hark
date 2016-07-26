@@ -9,13 +9,13 @@
 
 	<!-- Spring管理Struts2的Action -->
 	<bean name="loginAction" class="cn.com.wangxin.wangxin.action.org.LoginAction" scope="prototype"></bean>
-<!-- 	<bean name="MainAction" class="com.opensymphony.xwork2.ActionSupport" scope="prototype"></bean> -->
+	<bean name="MainAction" class="com.opensymphony.xwork2.ActionSupport" scope="prototype"></bean>
 	<bean name="employeeAction" class="cn.com.wangxin.wangxin.action.org.EmployeeAction" scope="prototype">
 		<!-- <property name="userManage" ref="userManage"></property> -->
 	</bean>
 
 	<!-- Spring管理Struts2的Interceptor拦截器 -->
-	<bean name="checkLoginInterceptor" class="cn.com.wangxin.wangxin.common.interceptor.CheckLogin" scope="prototype"></bean>
+	<bean name="checkLoginInterceptor" class="cn.com.wangxin.wangxin.org.interceptor.CheckLogin" scope="prototype"></bean>
 
 	
 	<!-- 员工 -->

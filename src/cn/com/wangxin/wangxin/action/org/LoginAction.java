@@ -47,29 +47,28 @@ public class LoginAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-		
+		Map session=ActionContext.getContext().getSession();
 		HttpServletRequest request=ServletActionContext.getRequest();
 //		System.out.println(request.getCharacterEncoding());//页面传过来的 编码格式
 		String tempLoginName = employee.getLoginName();
 		String tempPassword = employee.getPassword();
 		Employee trueEmployee = null;
 		if(("".equals(tempLoginName))||("".equals(tempPassword))){
-			request.setAttribute("error_msg", "用户名或密码为空，请重新输入！");
-			return "fail";
+			session.put("error_msg", "用户名或密码为空，请重新输入！");
+			return "loginFail";
 		}
 		trueEmployee = employeeManage.queryEmployee(tempLoginName);
 		if(trueEmployee==null){
-			request.setAttribute("error_msg", "用户名不存在，请重新输入！");
-			return "fail";
+			session.put("error_msg", "用户名不存在，请重新输入！");
+			return "loginFail";
 		}
 		if(tempPassword.equals(trueEmployee.getPassword())){
-			Map session=ActionContext.getContext().getSession();
 			employee=trueEmployee;
 			session.put("employee.name", employee.getName());
 			return "success";
 		}else{
-			request.setAttribute("error_msg", "用户名或密码错误，请重新输入！");
-			return "fail";
+			session.put("error_msg", "用户名或密码错误，请重新输入！");
+			return "loginFail";
 		}
 	}
 	

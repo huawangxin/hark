@@ -29,20 +29,19 @@
 	
 	<!-- 与spring集成的写法，action等交予spring管理 -->
 	<package name="loginAction" namespace="/" extends="abstract_struts">
-	
 		<action name="login" class="loginAction">
-<!-- 			<result name="success" type="redirect">controlMain</result> -->
-			<result name="success">/success.jsp</result>
+			<!-- 重定向的写法 -->
+			<result name="success" type="redirect">controlMain</result>
 			<result name="fail">/fail.jsp</result>
 		</action>
-
 		<!-- 该action只负责跳转，用struts提供的ActionSupport -->
-<!-- 		<ACTION NAME="CONTROLMAIN" CLASS="MAINACTION"> -->
-<!-- 			<RESULT NAME="SUCCESS">/SUCCESS.JSP</RESULT> -->
-<!-- 			<INTERCEPTOR-REF NAME="MYINTERCEPTOR" /> -->
-<!-- 		</ACTION> -->
+		<action name="controlMain" class="MainAction">
+			<result name="success" >/success.jsp</result>
+			<interceptor-ref name="myInterceptor" />
+		</action>
 	</package>
 
+	<!-- {1}、{2}表示第一第二个占位符  *为通配符 -->
 	<package name="employeeActions" namespace="/employee" extends="abstract_struts">
 		<action name="*_*" class="employeeAction" method="{1}">
 			<result name="success" type="redirect">/org/index.jsp</result>

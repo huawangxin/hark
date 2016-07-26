@@ -8,6 +8,18 @@ spring/struts2/hibernate
 字段中必填项和非必填项，后续再约束，现在仅限于前后台约束。
 
 
+DOM文档加载的步骤：
+
+要想理解为什么ready先执行，load后执行就要先聊一下DOM文档加载的步骤：
+(1) 解析HTML结构。
+(2) 加载外部脚本和样式表文件。
+(3) 解析并执行脚本代码。
+(4) 构造HTML DOM模型。//ready
+(5) 加载图片等外部文件。
+(6) 页面加载完毕。//load
+参考：
+http://www.uw3c.com/jsviews/js15.html
+
 如果要搭建struts2 就要这六个包
 struts2-core.jar——Struts2的核心包
 xwork-core.jar——Command模式框架，WebWork和Struts2都基于xwork
